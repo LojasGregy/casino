@@ -1,0 +1,17 @@
+{
+    "name": "gregymoney",
+    "version": "1.0.0",
+    "description": "Descrição do seu pacote",
+    "main": "index.js",
+    "scripts": {
+      "start": "node index.js"
+    },
+    "author": "Lojas Gregy",
+    "license": "Apache License 2.0",
+    "dependencies": {
+      "express": "^4.17.1",
+      "body-parser": "^1.19.0",
+      "mongoose": "^5.13.2"
+      // Adicione aqui outras dependências do seu projeto
+    }
+}
