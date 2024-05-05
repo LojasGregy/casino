@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Page</title>
+    <!-- Adicionar links para os arquivos CSS do header e footer -->
+    <link rel="stylesheet" href="caminho_para_header.css">
+    <link rel="stylesheet" href="caminho_para_footer.css">
+</head>
+<body>
+
+<!-- Incluir o header -->
+<header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Jogos</a></li>
+            <!-- Adicione mais links do menu conforme necessário -->
+        </ul>
+    </nav>
+</header>
+
+<h2>Página do Usuário Normal</h2>
+<div id="content">
+    <!-- Conteúdo da página do usuário normal será inserido aqui -->
+</div>
+
+<!-- Incluir o footer -->
+<footer>
+    <p>© 2024 Casino Online. Todos os direitos reservados.</p>
+    <ul>
+        <li><a href="#">Política de Privacidade</a></li>
+        <li><a href="#">Termos de Serviço</a></li>
+        <!-- Adicione mais links do footer conforme necessário -->
+    </ul>
+</footer>
+
+<!-- Script para carregar dinamicamente o conteúdo da página -->
+<script>
+    // Função para carregar o conteúdo da página
+    function loadPageContent(page) {
+        fetch(page)
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('content').innerHTML = data;
+            })
+            .catch(error => console.error('Erro ao carregar a página:', error));
+    }
+
+    // Carrega o conteúdo inicial da página
+    loadPageContent('/user_dashboard'); // Exemplo: '/user_dashboard' é a rota no servidor Flask para o painel do usuário
+</script>
+
+</body>
+</html>
